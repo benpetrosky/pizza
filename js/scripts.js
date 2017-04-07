@@ -1,7 +1,7 @@
 //business logic
-function Pizza(size, topping) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.topping = topping;
+  this.topping = toppings;
 }
 Pizza.prototype.pizzaOrder = function(){
   return "Your " + this.size + " pizza with " + this.topping + " will be ready in 20 minutes.";
@@ -18,24 +18,26 @@ $(function(){
     event.preventDefault();
 
     var sizeInput = $("input:radio[name=size]:checked").val();
-    console.log(sizeInput)
-    $("input:checkbox[name=topping]:checked").each(function(){
-      var toppingsInput = $(this).val();
+    var toppingsArray = []
+      $("input:checkbox[name=topping]:checked").each(function(){
+         toppingsArray.push($(this).val());
 
-      console.log(toppingsInput)
+        });
+
+      console.log(toppingsArray)
 
 
-      if (!sizeInput || !toppingsInput)
+      if (!sizeInput)
       {
         alert("We need to know the size you want.")
       }
       else
       {
-      var newPizza = new Pizza(sizeInput, toppingsInput);
+      var newPizza = new Pizza(sizeInput, toppingsArray);
 
       $("#order-ready").prepend("<li><span>" + newPizza.pizzaOrder() + "</span></li>");
       console.log(newPizza.pizzaOrder());
+
       }
     });
   });
-});

@@ -1,1 +1,15 @@
+img {
+  float: left;
+  padding: 2%;
+  border-color: black, 1%;
+}
+#reviews{
+  background-color: red;
+  color: green;
+  font-style: italic;
 
+}
+
+#header{
+  color: red;
+}

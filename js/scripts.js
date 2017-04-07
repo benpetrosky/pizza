@@ -1,7 +1,8 @@
 //business logic
-function Pizza(size, toppings) {
+function Pizza(size, toppings, numberToppings) {
   this.size = size;
   this.topping = toppings;
+  this.numberTopping = numberToppings;
 }
 Pizza.prototype.pizzaOrder = function(){
   return "Your " + this.size + " pizza with " + this.topping + " will be ready in 20 minutes.";
@@ -10,18 +11,32 @@ Pizza.prototype.pizzaOrder = function(){
 Pizza.prototype.cost = function(){
   var total= 0;
 
-  if (this.size === "small")
+  if (this.size === "small" && this.numberTopping<4)
   {
     total += 5;
   }
-  else if (this.size === "medium")
+  else if (this.size === "small" && this.numberTopping>=4)
+  {
+    total += 6;
+  }
+  else if (this.size === "medium" && this.numberTopping<4)
   {
     total += 7;
   }
-  else if (this.size === "large")
+  else if (this.size === "medium" && this.numberTopping>=4)
+  {
+    total += 8;
+  }
+  else if (this.size === "large" && this.numberTopping<4)
+  {
+    total += 9;
+  }
+  else if (this.size === "large" && this.numberTopping>=4)
   {
     total += 10;
   }
+
+
   return ("Your total cost comes to $" + total + ".")
 }
 
@@ -46,7 +61,7 @@ $(function(){
       }
       else
       {
-      var newPizza = new Pizza(sizeInput, toppingsArray);
+      var newPizza = new Pizza(sizeInput, toppingsArray, toppingsArrayLength);
 
       $("#order-ready").text(newPizza.pizzaOrder() + "  " + newPizza.cost());
 

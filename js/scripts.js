@@ -33,7 +33,7 @@ $(function(){
       {
       var newPizza = new Pizza(sizeInput, toppingsInput);
 
-      $("#order-ready").prepend("<li><span" + newPizza.pizzaOrder() + "</span></li>");
+      $("#order-ready").prepend("<li><span>" + newPizza.pizzaOrder() + "</span></li>");
       console.log(newPizza.pizzaOrder());
       }
     });

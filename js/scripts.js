@@ -64,5 +64,8 @@ $(function(){
 
       $("#order-ready").text(newPizza.pizzaOrder() + "  " + newPizza.cost());
       }
+
+      $(".thank-you").show();
+      $(".name").text(customerName);
     });
   });

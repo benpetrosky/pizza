@@ -63,8 +63,6 @@ $(function(){
       var newPizza = new Pizza(sizeInput, toppingsArray, toppingsArrayLength);
 
       $("#order-ready").text(newPizza.pizzaOrder() + "  " + newPizza.cost());
-
-
       }
     });
   });

@@ -8,21 +8,32 @@
 
 _This web site allows user to select a size and variety of toppings and returns the price and time their pizza will be ready._
 
-## Specs
+## Specifications
+
+* Description :  Notifies the user if there are any necessary fields omitted
+  example input: size : __(blank)____
+  example Output: "Please fill complete all fields before placing your order."
+
+* Description :  Gives user a cost of pizza upon ordering. cost is determined by size.
+  example input: size : small, medium, large
+  example Output: "$5", "$7", "$9"
+
+* Description :  Adds 1 dollar to total cost if the customer orders 4 or more toppings.
+  example input: size : small toppings : pepperoni, sausage, bacon, black olives
+  example Output: "$5" (5 + 1)
+
+
+
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _clone this repository_
+* _open the index.html in the browser of your choice_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+There are no known bugs within this web page.
 
 ## Support and contact details
 

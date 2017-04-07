@@ -52,7 +52,6 @@ $(function(){
          toppingsArray.push($(this).val());
         });
     var toppingsArrayLength = toppingsArray.length;
-    console.log(toppingsArrayLength)
 
       if (!sizeInput || !customerName || !customerNumber)
       {

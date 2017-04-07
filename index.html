@@ -2,91 +2,126 @@
 <html>
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
-      <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
-      <script src="js/jquery-3.2.0.js"></script>
-      <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+    <script src="js/jquery-3.2.0.js"></script>
+    <script src="js/scripts.js"></script>
     <title>Pizza</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Papa Pete's Pizza</h1>
+        <h1><marquee>Papa Pete's Pizza</marquee></h1>
       </div>
-      <form id="form-one" class="form-group">
-        <div>
-          <h2>Select Your Pizza Size</h2>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="small">
-              Small
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="medium">
-              Medium
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="size" value="large">
-              Large
-            </label>
+      <div class="row">
+        <div class="col-md-4 well">
+          <h2>Order Your Custom Pizza Online</h2>
+          <form id="form-one" class="form-group">
+            <div>
+              <h3>Select Your Pizza Size</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="small">
+                  Small
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="medium">
+                  Medium
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="size" value="large">
+                  Large
+                </label>
+              </div>
+            </div>
+            <div>
+              <h3>Select Your Pizza Sauce</h3>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sauce" value="marinara">
+                  Marinara
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sauce" value="alfredo">
+                  Alfredo
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="sauce" value="buffalo">
+                  Buffalo
+                </label>
+              </div>
+            </div>
+            <div>
+              <h3>Select Your toppings</h3>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="pepperoni">
+                  Pepperoni
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="sausage">
+                  Sausage
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="bacon">
+                  Bacon
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="black olives">
+                  Black Olives
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="green peppers">
+                  Green Peppers
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="anchovies">
+                  Anchovies
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="topping" value="canadian bacon">
+                  Canadian Bacon
+                </label>
+              </div>
+            </div>
+            <div class="form-horizontal">
+              <label for="name">Name:</label>
+              <input id="customer-name" type="text" name="name" value="">
+            </div>
+            <div class="form-horizontal">
+              <label for="name">Phone Number:</label>
+              <input id="customer-number" type="text" name="name" value="" placeholder="(###)-###-####">
+            </div>
+            <button type="submit" name="button" class="btn btn-danger">Order Now!</button>
+          </form>
+        </div>
+        <div class="col-md-8">
+          <div>
+            <h4 class="Order">Below is your Order</h4><br>
+            <p id="order-ready">
+            </p>
           </div>
         </div>
-        <div>
-          <h2>Select Your toppings</h2>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="pepperoni">
-              Pepperoni
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="sausage">
-              Sausage
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="bacon">
-              Bacon
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="black olives">
-              Black Olives
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="green peppers">
-              Green Peppers
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="anchovies">
-              Anchovies
-            </label>
-          </div>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" name="topping" value="canadian bacon">
-              Canadian Bacon
-            </label>
-          </div>
-        </div>
-        <button type="submit" name="button" class="btn btn-danger">Order Now!</button>
-      </form>
-      <div>
-        <h3 class="Order">Below is your Order</h3><br>
-        <p id="order-ready">
-        </p>
       </div>
-
     </div>
   </body>
 </html>

@@ -35,11 +35,8 @@ Pizza.prototype.cost = function(){
   {
     total += 10;
   }
-
-
   return ("Your total cost comes to $" + total + ".")
 }
-
 
 //ui logic
 
@@ -47,6 +44,8 @@ $(function(){
   $("#form-one").submit(function(event){
     event.preventDefault();
 
+    var customerName = $("#customer-name").val();
+    var customerNumber = $("#customer-number").val();
     var sizeInput = $("input:radio[name=size]:checked").val();
     var toppingsArray = []
       $("input:checkbox[name=topping]:checked").each(function(){
@@ -55,9 +54,9 @@ $(function(){
     var toppingsArrayLength = toppingsArray.length;
     console.log(toppingsArrayLength)
 
-      if (!sizeInput)
+      if (!sizeInput || !customerName || !customerNumber)
       {
-        alert("We need to know the size you want.")
+        alert("You may have missed a required field. Please fill out all of the information.")
       }
       else
       {
@@ -65,8 +64,6 @@ $(function(){
 
       $("#order-ready").text(newPizza.pizzaOrder() + "  " + newPizza.cost());
 
-      // $("input:radio[name=size]:checked").val();
-      // $("input:checkbox[name=topping]:checked").val();
 
       }
     });

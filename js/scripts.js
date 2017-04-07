@@ -21,11 +21,7 @@ $(function(){
     var toppingsArray = []
       $("input:checkbox[name=topping]:checked").each(function(){
          toppingsArray.push($(this).val());
-
         });
-
-      console.log(toppingsArray)
-
 
       if (!sizeInput)
       {
@@ -37,6 +33,7 @@ $(function(){
 
       $("#order-ready").prepend("<li><span>" + newPizza.pizzaOrder() + "</span></li>");
       console.log(newPizza.pizzaOrder());
+      console.log(toppingsArray)
 
       }
     });

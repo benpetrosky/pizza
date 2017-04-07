@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all">
+      <link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
+      <script src="js/jquery-3.2.0.js"></script>
+      <script src="js/scripts.js"></script>
+    <title>Pizza</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Papa Pete's Pizza</h1>
+      </div>
+      <form id="form-one" class="form-group">
+        <div>
+          <h2>Select Your Pizza Size</h2>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="small">
+              Small
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="medium">
+              Medium
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="size" value="large">
+              Large
+            </label>
+          </div>
+        </div>
+        <div>
+          <h2>Select Your toppings</h2>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="pepperoni">
+              Pepperoni
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="sausage">
+              Sausage
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="bacon">
+              Bacon
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="black olives">
+              Black Olives
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="green peppers">
+              Green Peppers
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="anchovies">
+              Anchovies
+            </label>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" name="topping" value="canadian bacon">
+              Canadian Bacon
+            </label>
+          </div>
+        </div>
+        <button type="submit" name="button" class="btn btn-danger">Order Now!</button>
+      </form>
+      <div>
+        <h3 class="Order">Below is your Order</h3><br>
+        <ul id="Order-ready">
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>

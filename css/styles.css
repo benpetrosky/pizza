@@ -1,6 +1,7 @@
 .thank-you{
   display: none;
 }
+
 #story-header{
   text-align: center;
   text-decoration: underline;
@@ -11,21 +12,21 @@
   border: 2px black;
   padding: 2%;
   float: left;
-
 }
+
 #reviews{
   background-color: black;
   color: red;
   font-style: italic;
   font-weight: bold;
   font-size: 150%;
-
 }
 
 #header{
   color: red;
   background-color: white;
 }
+
 #flip {
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
@@ -42,6 +43,7 @@ h2 {
 h3 {
   text-decoration: underline;
 }
+
 .story{
   background-color: #f4be1a;
 }
